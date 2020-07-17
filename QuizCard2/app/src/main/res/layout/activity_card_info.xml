@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardInfoActivity">
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/primary_dark"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/shadow"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/view1"/>
+
+    <ImageButton
+        android:id="@+id/button_back"
+        android:src="@drawable/icon_back"
+        android:scaleType="fitXY"
+        android:background="@color/primary_dark"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:padding="8dp"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="@id/view1"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintBottom_toBottomOf="@id/view1" />
+
+    <ImageButton
+        android:id="@+id/button_for_delete"
+        android:src="@drawable/icon_delete"
+        android:scaleType="fitXY"
+        android:background="@color/primary_dark"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="6dp"
+        android:padding="8dp"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="@id/view1"
+        app:layout_constraintEnd_toEndOf="@id/view1"
+        app:layout_constraintBottom_toBottomOf="@id/view1"/>
+
+    <TextView
+        style="@style/TextViewRed"
+        android:id="@+id/tv_language"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/secondary_text"
+        android:textSize="18sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view2" />
+
+    <TextView
+        style="@style/TextViewMain"
+        android:id="@+id/tv_card_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@color/primary_text"
+        android:textSize="20sp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical"
+        android:minLines="3"
+        android:maxLines="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_language" />
+
+    <Button
+        style="@style/Button1"
+        android:id="@+id/button_for_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
+        android:text="@string/translation"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textColor="@color/secondary_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

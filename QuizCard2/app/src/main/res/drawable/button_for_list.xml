@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="false">
+        <layer-list>
+            <!-- Gray shadow. -->
+            <item android:top="4dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/shadow" />
+                    <corners android:radius="16dp" />
+                </shape>
+            </item>
+            <!-- White foreground. -->
+            <item android:bottom="4dp">
+                <shape android:shape="rectangle">
+                    <corners
+                        android:topLeftRadius="16dp"
+                        android:topRightRadius="16dp"
+                        android:bottomRightRadius="16dp"
+                        android:bottomLeftRadius="16dp" />
+                    <solid
+                        android:color="@color/green"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- Gray shadow. -->
+            <item android:top="4dp">
+                <shape>
+                    <solid android:color="@color/shadow" />
+                    <corners android:radius="16dp" />
+                </shape>
+            </item>
+            <!-- White foreground. -->
+            <item android:bottom="4dp">
+                <shape>
+                    <corners
+                        android:topLeftRadius="16dp"
+                        android:topRightRadius="16dp"
+                        android:bottomRightRadius="16dp"
+                        android:bottomLeftRadius="16dp" />
+                    <solid
+                        android:color="@color/green"/>
+                    <stroke
+                        android:width="2dp"
+                        android:color="#259104"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

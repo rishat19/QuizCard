@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">QuizCard</string>
+    <string name="list_of_cards">СПИСОК\nКАРТОЧЕК</string>
+    <string name="start_quiz">НАЧАТЬ\nКВИЗ</string>
+    <string name="new_card">Новая карточка</string>
+    <string name="enter_text">Enter the text:</string>
+    <string name="translate">Введите перевод текста:</string>
+    <string name="translate2">Введите перевод:</string>
+    <string name="translate3">Enter translation:</string>
+    <string name="english">ENGLISH</string>
+    <string name="russian">РУССКИЙ</string>
+    <string name="quiz">QUIZ</string>
+    <string name="show_translation">Подсмотреть перевод</string>
+    <string name="good_job">Congratulations!\n\nВы успешно перевели все карточки</string>
+    <string name="back_to_main">ВЕРНУТЬСЯ</string>
+    <string name="translation">ПЕРЕВОД</string>
+    <string name="logo">Quiz\n\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020Card</string>
+    <string name="arrow">Arrow</string>
+</resources>

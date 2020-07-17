@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListOfCardsActivity">
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/primary_dark"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/shadow"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/view1"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_cards"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="64dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view2"
+        tools:listitem="@layout/item_card" />
+
+    <ImageButton
+        android:id="@+id/button_for_add"
+        android:src="@drawable/icon_add"
+        android:scaleType="fitXY"
+        android:background="@color/primary_dark"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="6dp"
+        android:padding="8dp"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="@id/view1"
+        app:layout_constraintEnd_toEndOf="@id/view1"
+        app:layout_constraintBottom_toBottomOf="@id/view1"/>
+
+    <ImageButton
+        android:id="@+id/button_back"
+        android:src="@drawable/icon_back"
+        android:scaleType="fitXY"
+        android:background="@color/primary_dark"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:padding="8dp"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="@id/view1"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintBottom_toBottomOf="@id/view1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

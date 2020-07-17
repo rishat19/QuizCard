@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="icon">@color/icons</item>
+        <item name="divider">@color/divider</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+
+    <style name="Button1">
+        <item name="android:background">@drawable/button1</item>
+    </style>
+
+    <style name="TextViewMain">
+        <item name="android:background">@drawable/text_view_main</item>
+    </style>
+
+    <style name="TextViewRed">
+        <item name="android:background">@drawable/text_view_red</item>
+    </style>
+
+    <style name="TextViewGreen">
+        <item name="android:background">@drawable/text_view_green</item>
+    </style>
+
+    <style name="ViewLogo">
+        <item name="android:background">@drawable/view_logo</item>
+    </style>
+
+    <style name="ButtonForList">
+        <item name="android:background">@drawable/button_for_list</item>
+    </style>
+
+    <style name="ButtonForQuiz">
+        <item name="android:background">@drawable/button_for_quiz</item>
+    </style>
+
+</resources>

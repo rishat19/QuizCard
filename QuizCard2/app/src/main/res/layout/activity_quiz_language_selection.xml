@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizLanguageSelectionActivity">
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/primary_dark"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/shadow"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/view1"/>
+
+    <ImageButton
+        android:id="@+id/button_back"
+        android:src="@drawable/icon_back"
+        android:scaleType="fitXY"
+        android:background="@color/primary_dark"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:padding="8dp"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="@id/view1"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintBottom_toBottomOf="@id/view1"/>
+
+    <TextView
+        android:id="@+id/tv_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:textColor="@color/secondary_text"
+        android:textSize="20sp"
+        android:text="@string/quiz"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/view1"
+        app:layout_constraintEnd_toEndOf="@id/view1"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toTopOf="@id/view1"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp" />
+
+    <Button
+        android:id="@+id/button_eng_to_ru"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@id/divider_2"/>
+
+    <Button
+        android:id="@+id/button_ru_to_eng"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/divider_2" />
+
+    <TextView
+        style="@style/TextViewRed"
+        android:id="@+id/tv_english_1"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="36dp"
+        android:textColor="@color/secondary_text"
+        android:textSize="18sp"
+        android:text="@string/english"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/divider_2"
+        app:layout_constraintEnd_toStartOf="@id/arrow_1" />
+
+    <TextView
+        style="@style/TextViewGreen"
+        android:id="@+id/tv_russian_1"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="36dp"
+        android:textColor="@color/secondary_text"
+        android:textSize="18sp"
+        android:text="@string/russian"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/divider_2"
+        app:layout_constraintStart_toEndOf="@id/arrow_1" />
+
+    <TextView
+        style="@style/TextViewRed"
+        android:id="@+id/tv_english_2"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:textColor="@color/secondary_text"
+        android:textSize="18sp"
+        android:text="@string/english"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/divider_2"
+        app:layout_constraintStart_toEndOf="@id/arrow_2" />
+
+    <TextView
+        style="@style/TextViewGreen"
+        android:id="@+id/tv_russian_2"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="36dp"
+        android:textColor="@color/secondary_text"
+        android:textSize="18sp"
+        android:text="@string/russian"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/divider_2"
+        app:layout_constraintEnd_toStartOf="@id/arrow_2" />
+
+    <ImageView
+        android:id="@+id/arrow_1"
+        android:contentDescription="@string/arrow"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/icon_arrow"
+        tools:srcCompat="@string/arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/divider_2" />
+
+    <ImageView
+        android:id="@+id/arrow_2"
+        android:contentDescription="@string/arrow"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/icon_arrow"
+        tools:srcCompat="@string/arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider_2" />
+
+    <View
+        android:id="@+id/divider_2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/divider"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <View
+        android:id="@+id/divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="36dp"
+        android:background="@color/divider"
+        app:layout_constraintBottom_toTopOf="@id/arrow_1" />
+
+    <View
+        android:id="@+id/divider_3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/divider"
+        app:layout_constraintTop_toBottomOf="@id/arrow_2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

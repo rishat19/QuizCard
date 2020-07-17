@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizActivity">
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/primary_dark"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/shadow"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/view1"/>
+
+    <TextView
+        android:id="@+id/tv_translated"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:textColor="@color/secondary_text"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/view1"
+        app:layout_constraintEnd_toEndOf="@id/view1"
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintTop_toTopOf="@id/view1"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        style="@style/TextViewMain"
+        android:id="@+id/tv_card_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@color/primary_text"
+        android:textSize="20sp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical"
+        android:minLines="3"
+        android:maxLines="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view2" />
+
+    <TextView
+        style="@style/TextViewRed"
+        android:id="@+id/tv_language_left"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/secondary_text"
+        android:textSize="18sp"
+        android:text="@string/english"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_card_text"
+        app:layout_constraintEnd_toStartOf="@id/arrow" />
+
+    <TextView
+        style="@style/TextViewGreen"
+        android:id="@+id/tv_language_right"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/secondary_text"
+        android:textSize="18sp"
+        android:text="@string/russian"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_card_text"
+        app:layout_constraintStart_toEndOf="@id/arrow" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:contentDescription="@string/arrow"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/icon_arrow"
+        tools:srcCompat="@string/arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_card_text" />
+
+    <EditText
+        style="@style/TextViewMain"
+        android:id="@+id/et_translation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="32dp"
+        android:inputType="textMultiLine"
+        android:textSize="20sp"
+        android:textColor="@color/primary_text"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical"
+        android:textColorHint="@color/shadow"
+        android:minLines="3"
+        android:maxLines="5"
+        android:autofillHints=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/arrow"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/button_for_check"
+        android:background="@drawable/icon_forward"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginBottom="128dp"
+        app:layout_constraintStart_toStartOf="@id/button_for_translate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_translation"/>
+
+    <Button
+        android:id="@+id/button_for_translate"
+        android:background="@drawable/icon_idea"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginBottom="128dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/button_for_check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_translation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
